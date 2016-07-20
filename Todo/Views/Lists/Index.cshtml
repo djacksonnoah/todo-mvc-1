@@ -23,9 +23,11 @@
             @Html.DisplayFor(modelItem => item.ListTitle)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ListID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ListID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ListID })
+            
+            <a href="@Url.Action("Edit", new { id=item.ListID })" title="Edit"><span class="glyphicon glypicon-pencil"></span></a> |
+            <a href="@Url.Action("Details", new { id=item.ListID })" title="Details"><span class="glyphicon glypicon-list-alt"></span></a> |
+            <a href="@Url.Action("Delete", new { id=item.ListID })" title="Delete"><span class="glyphicon glypicon-remove-sign"></span></a>
+
         </td>
     </tr>
 }
